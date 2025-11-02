@@ -1,0 +1,41 @@
+name: Generate Snake
+
+on:
+  # Atur jadwal agar Action berjalan setiap hari pada pukul 00:00 UTC (Tengah Malam)
+  schedule:
+    - cron: "0 0 * * *"
+  # Memungkinkan untuk menjalankan Action secara manual
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Langkah 1: Checkout repositori Anda
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      # Langkah 2: Menjalankan aksi Snake Game
+      - name: Generate Snake Contribution
+        uses: Platane/snk@v3
+        with:
+          # Pastikan USERNAME_ANDA diganti dengan username GitHub Anda (muhammadfahrii)
+          github_user_name: muhammadfahrii 
+          
+          # Tentukan output (nama file gambar)
+          outputs: |
+            dist/pacman-contribution-graph.svg
+            dist/pacman-contribution-graph-dark.svg
+            
+          # Opsi tambahan (opsional, bisa dihapus jika tidak mau)
+          # Membawa output ke branch 'output'
+          target_branch: output
+          
+      # Langkah 3: Push file SVG yang dihasilkan ke repositori
+      - name: Push Snake Artifact
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

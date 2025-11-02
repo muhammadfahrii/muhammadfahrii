@@ -1,4 +1,4 @@
-name: Generate Snake
+name: Generate Packman
 
 on:
   # Atur jadwal agar Action berjalan setiap hari pada pukul 00:00 UTC (Tengah Malam)
@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v4
 
       # Langkah 2: Menjalankan aksi Snake Game
-      - name: Generate Snake Contribution
+      - name: Generate Packman Contribution
         uses: Platane/snk@v3
         with:
           # Pastikan USERNAME_ANDA diganti dengan username GitHub Anda (muhammadfahrii)
@@ -36,7 +36,7 @@ jobs:
           target_branch: output
           
       # Langkah 3: Push file SVG yang dihasilkan ke repositori
-      - name: Push Snake Artifact
+      - name: Push Packman Artifact
         uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output

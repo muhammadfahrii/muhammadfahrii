@@ -1,4 +1,4 @@
-<h2 align="center">Hey 👋, Hi, I'm Muhammad Fahri, a junior programmer</h2>
+<h2 align="left">Hi 👋, I'm Muhammad Fahri, a junior programmer</h2>
 
 ###
 

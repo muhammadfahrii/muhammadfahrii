@@ -14,3 +14,12 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" />
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=MuslamGanz123&show_icons=true&theme=...)
+</p>
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=MuslamGanz123&theme=...)
+</p>
